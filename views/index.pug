@@ -1,0 +1,14 @@
+extends layout
+block content
+  h1= title
+  p Playing with Heroku Server #{title}
+  button(type="button",class="btn btn-info",onclick="moreClaps()") Press me
+  p 
+  div(id="target") Clap for me
+  script. 
+    clap_count = 0;
+    function moreClaps() {
+    clap_count = clap_count+2;
+    document.getElementById("target").innerHTML = `Clap ${clap_count} times`;
+    }
+  a(href="animal") Animal Link

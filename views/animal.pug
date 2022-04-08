@@ -1,0 +1,16 @@
+
+block content
+  h1= title
+  -let results = [{animal_name:"Dog", animal_breed:"Husky",animal_weight:18},{animal_name:"Monkey", animal_breed:"Chimpanzee",animal_weight:8},{animal_name:"Dog", animal_breed:"Husky",animal_weight:12}]
+  div(class="container-fluid")
+  div(class="row")
+        each a,index in results 
+            div(class="col-sm-2" onclick=`buy(${index})`)  #{a.animal_name}  
+            div(class="col-sm-2" onclick=`buy(${index})`)  #{a.animal_breed}
+            div(class="col-sm-2" onclick=`buy(${index})`)  #{a.animal_weight}
+script.
+    function buy(b)
+    {
+        alert(`You have purchased item ${b+1}`);
+    }
+
