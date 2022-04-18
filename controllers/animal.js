@@ -56,7 +56,7 @@ exports.animal_update_put = async function(req, res) {
     console.log(`update on id ${req.params.id} with body
 ${JSON.stringify(req.body)}`) 
     try {
-        let toUpdate = await Costume.findById( req.params.id) 
+        let toUpdate = await animal.findById( req.params.id) 
         // Do updates of properties 
         if(req.body.animal_type) 
                toUpdate.animal_name = req.body.animal_name; 
@@ -84,3 +84,30 @@ exports.animal_view_all_Page = async function(req, res) {
         res.send(`{"error": ${err}}`); 
     }   
 };
+
+// Handle animal delete on DELETE. 
+exports.animal_delete = async function(req, res) { 
+    console.log("delete "  + req.params.id) 
+    try { 
+        result = await animal.findByIdAndDelete( req.params.id) 
+        console.log("Removed " + result) 
+        res.send(result) 
+    } catch (err) { 
+        res.status(500) 
+        res.send(`{"error": Error deleting ${err}}`); 
+    } 
+}; 
+
+ // Handle a show one view with id specified by query 
+ exports.animal_view_one_Page = async function(req, res) { 
+    console.log("single view for id "  + req.query.id) 
+    try{ 
+        result = await animal.findById( req.query.id) 
+        res.render('animaldetail',  
+{ title: 'animal Detail', toShow: result }); 
+    } 
+    catch(err){ 
+        res.status(500) 
+        res.send(`{'error': '${err}'}`); 
+    } 
+}; 

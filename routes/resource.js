@@ -27,5 +27,8 @@ router.get('/resource/animal/:id', animal_controller.animal_detail);
  
 // GET request for list of all animal items. 
 router.get('/resource/animal', animal_controller.animal_list); 
+
+/* GET detail animal page */ 
+router.get('/detail', animal_controller.animal_view_one_Page); 
  
 module.exports = router; 
