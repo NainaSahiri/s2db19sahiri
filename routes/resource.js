@@ -30,5 +30,8 @@ router.get('/resource/animal', animal_controller.animal_list);
 
 /* GET detail animal page */ 
 router.get('/detail', animal_controller.animal_view_one_Page); 
- 
+
+/* GET create animal page */ 
+router.get('/create', animal_controller.animal_create_Page); 
+
 module.exports = router; 
