@@ -7,6 +7,8 @@ a {
   color: #00B7FF;
 }
 .animalAttr { 
-  background-color: aquamarine; 
+  font-family: cursive;
+  font-size: 15px;
+  background-color: blanchedalmond; 
   width: 120px; 
 }

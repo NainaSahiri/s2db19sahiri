@@ -20,7 +20,7 @@ router.delete('/resource/animal/:id', animal_controller.animal_delete);
  
 // PUT request to update animal. 
 router.put('/resource/animal/:id', 
-animal_controller.animal_update_put); x``
+animal_controller.animal_update_put); 
  
 // GET request for one animal. 
 router.get('/resource/animal/:id', animal_controller.animal_detail); 
