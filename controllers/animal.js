@@ -58,10 +58,10 @@ ${JSON.stringify(req.body)}`)
     try {
         let toUpdate = await animal.findById( req.params.id) 
         // Do updates of properties 
-        if(req.body.animal_type) 
+        if(req.body.animal_name) 
                toUpdate.animal_name = req.body.animal_name; 
-        if(req.body.cost) toUpdate.animal_breed = req.body.animal_breed; 
-        if(req.body.size) toUpdate.animal_weight = req.body.animal_weight; 
+        if(req.body.animal_breed) toUpdate.animal_breed = req.body.animal_breed; 
+        if(req.body.animal_weight) toUpdate.animal_weight = req.body.animal_weight; 
         let result = await toUpdate.save(); 
         console.log("Sucess " + result) 
         res.send(result) 
