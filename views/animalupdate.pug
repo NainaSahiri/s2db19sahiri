@@ -17,13 +17,13 @@ block content
     - let actionid = "/resource/resource/animal/" + animalid 
     form(id='animalForm', action= actionid, method="PUT") 
       div.form-group 
-          label.animalAttr(for='animal_name') animal type: 
+          label.animalAttr(for='animal_name') Animal Name: 
           input#animal_name(type='text', name='animal_name', value= animal_name ) 
       div.form-group 
-          label.animalAttr(for='animal_breed') animal breed: 
+          label.animalAttr(for='animal_breed') Animal breed: 
           input#animal_breed(type='text', name='animal_breed', value= animal_breed ) 
       div.form-group 
-          label.animalAttr(for='animal_weight') animal weight: 
+          label.animalAttr(for='animal_weight') Animal weight: 
           input#animal_weight(type='number', name='animal_weight', value= animal_weight ) 
       input(type="submit") 
  
