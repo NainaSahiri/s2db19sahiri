@@ -8,36 +8,25 @@ var animal_controller = require('../controllers/animal');
 /// API ROUTE /// 
  
 // GET resources base. 
-router.get('/resource', api_controller.api); 
+router.get('/', api_controller.api); 
  
 /// animal ROUTES /// 
  
 // POST request for creating a animal.  
-router.post('/resource/animal', animal_controller.animal_create_post); 
+router.post('/animal', animal_controller.animal_create_post); 
  
 // DELETE request to delete animal. 
-router.delete('/resource/animal/:id', animal_controller.animal_delete); 
+router.delete('/animal/:id', animal_controller.animal_delete); 
  
 // PUT request to update animal. 
-router.put('/resource/animal/:id', 
+router.put('/animal/:id', 
 animal_controller.animal_update_put); 
  
 // GET request for one animal. 
-router.get('/resource/animal/:id', animal_controller.animal_detail); 
+router.get('/animal/:id', animal_controller.animal_detail); 
  
 // GET request for list of all animal items. 
-router.get('/resource/animal', animal_controller.animal_list); 
+router.get('/animal', animal_controller.animal_list); 
 
-/* GET detail animal page */ 
-router.get('/detail', animal_controller.animal_view_one_Page); 
-
-/* GET create animal page */ 
-router.get('/create', animal_controller.animal_create_Page); 
-
-/* GET create update page */ 
-router.get('/update', animal_controller.animal_update_Page); 
-
-/* GET delete animal page */ 
-router.get('/delete', animal_controller.animal_delete_Page); 
 
 module.exports = router; 

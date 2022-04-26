@@ -2,11 +2,11 @@ extends layout
 
 block content
     h1= title
-    -let results = [{animal_name:"Dog", animal_breed:"Husky",animal_weight:18},{animal_name:"Monkey", animal_breed:"Chimpanzee",animal_weight:8},{animal_name:"Dog", animal_breed:"Husky",animal_weight:12}]
+    -let items=results;
     div(class="container-fluid") 
     div(class="row m-1") 
-      each item in results
-        - let destination = `dispatch(\"resource/resource/update?id=${item._id}\")` 
+      each item in items
+        - let destination = `dispatch(\"animal/update/?id=${item._id}\")` 
         div(class="row-sm-2", class="m-1") Item #{item.animal_name}(#{item.animal_breed}) is #{item.animal_weight} 
           button.btn( class="btn-primary ml-1", onclick= destination) Update 
    

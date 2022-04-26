@@ -32,7 +32,7 @@ block content
   script. 
     function cancel() { 
       // Go back to the home page for the animal collection 
-      window.location.href='/resource/resource/animal' 
+      window.location.href='/resource/animal' 
     } 
   script. 
     function deleteOnid() { 
@@ -44,7 +44,7 @@ block content
         return resp.json(); // or resp.text() or whatever the server sends 
       }).then((body) => { 
         alert("Delete succeded") 
-        window.location.href='/resource/resource/animal' 
+        window.location.href='/resource/animal' 
         // TODO handle body 
       }).catch((error) => { 
         // TODO handle error 

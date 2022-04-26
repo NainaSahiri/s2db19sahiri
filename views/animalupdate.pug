@@ -14,7 +14,7 @@ block content
     div.row(class='mb-2') 
       div.mr-1 ID is 
       div #{animalid} 
-    - let actionid = "/resource/resource/animal/" + animalid 
+    - let actionid = "/resource/animal/" + animalid 
     form(id='animalForm', action= actionid, method="PUT") 
       div.form-group 
           label.animalAttr(for='animal_name') Animal Name: 
